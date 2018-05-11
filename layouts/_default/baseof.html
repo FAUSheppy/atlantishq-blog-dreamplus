@@ -2,14 +2,41 @@
 <html lang="{{- .Site.LanguageCode -}}">
 
 <head>
-	{{- partial "criticalCSS.html" . -}}
-<title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
+    <!-- all this in head to nginx_http2 can autopush it -->
+
+    <!-- preload stylesheets -->
+    <link rel="stylesheet preload" href="/css/fonts.css" as="style">
+    <link rel="stylesheet preload" href="/css/main-style.css" as="style">
+    <link rel="stylesheet preload" type="text/css" href="https://media.atlantishq.de/blog/semantic.css" as="style">
+    <link rel="stylesheet preload" href="/css/body-pushable.css" as="style">
+    <link rel="stylesheet preload" type="text/css" href="/css/site.css" as="style">
+
+    <!-- preload scripts -->
+    <script rel="preload" src="https://media.atlantishq.de/blog/jquery.min.js"></script>
+    <script rel="preload" src="https://media.atlantishq.de/blog/semantic.min.js"></script>
+
+    <!-- preload fonts -->
+    <link rel="prefetch" href="/fonts/AbrilFatface-Regular.otf" as="font">
+    <link rel="prefetch" href="/fonts/BebasNeue Regular.otf" as="font">
+    <link rel="prefetch" href="https://media.atlantishq.de/blog/themes/default/assets/fonts/icons.woff2" as="font">
+    <link rel="prefetch" href="https://media.atlantishq.de/blog/themes/default/assets/fonts/outline-icons.woff2" as="font">
+    
+    <!-- manifest -->
+    <link rel="manifest"   href="https://media.atlantishq.de/blog/manifest/manifest.json">
+
+    <!-- some style -->
+    <meta name ="theme_color" content="#e1850e"/>
+
+    <!-- title -->
+    <title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
+
+    <!-- hugo partials -->
 	{{- partial "head.html" . -}}
 	{{- partial "init_head.html" . -}}
 </head>
 
 <body>
-	{{- partial "background.html" . -}}
+    <script src=/js/background.js></script>
 	{{- partial "sidebar.html" . -}}
 	<div class="pusher">
 		<div class="flipper">
