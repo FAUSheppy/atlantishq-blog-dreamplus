@@ -32,6 +32,7 @@
 	{{ end }}
 	{{- if not (eq .Section .Site.Params.contentType) -}}
 	{{ $paginator := .Paginate (where .Data.Pages "Type" .Site.Params.contentType ) (index .Site.Params "paginate" | default .Site.Params.itemsPerPage) }}
+    <!--
 	<div class="item">
 		{{ if $paginator.HasPrev }}
 		<a href="{{ $paginator.Prev.URL }}">
@@ -41,6 +42,8 @@
 		<i class="disabled inverted big chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
   	{{ end }}
   </div>
+    -->
+    <!--
 	<div class="item">
 		{{- if $paginator.HasNext -}}
 		<a href="{{ $paginator.Next.URL }}">
@@ -50,6 +53,7 @@
 		<i class="disabled inverted big chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
 		{{ end }}
 	</div>
+    -->
 	{{ end }}	
 	{{- if .IsPage -}}
 	<div class="ui container tablet computer only grid">

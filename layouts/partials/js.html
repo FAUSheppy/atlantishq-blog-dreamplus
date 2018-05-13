@@ -1,11 +1,12 @@
 <script src="https://media.atlantishq.de/blog/jquery.min.js"></script>
 <script src="/js/site.js"></script>
+<!-- defer semantic scripts cause makes no sense to run the before jquery -->
 <script src="https://media.atlantishq.de/blog/semantic.min.js"></script>
 {{- if .Site.Params.twitterEmoji -}}
-	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
+<!--	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script> -->
 {{ end }}
 {{- range $type, $val:= .Site.Params.customJS }}
 	{{- if and ((gt (len $val) 0) (index $val "")) -}}
-		<script src="/{{ index $val }}"></script>
+		<script async src="/{{ index $val }}"></script>
 	{{ end }}
 {{ end }}

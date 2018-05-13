@@ -347,8 +347,9 @@ ul > li {
 }
 
 .post-content pre code {
-  font-family: 'Inconsolata';
-  font-size: 1.2em;
+  /*font-family: 'Inconsolata';*/
+  font-family: monospace;
+  font-size: 1em;
   background-color: unset;
   border: unset;
 }
