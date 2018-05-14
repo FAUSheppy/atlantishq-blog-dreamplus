@@ -1,7 +1,9 @@
+:root {
+	--fallback-bg-color: #40e0d0, #ff8c00, #ff0080;
+}
 body {
 	display: block;
-	--colorBG: "#40e0d0, #ff8c00, #ff0080";
-	background: linear-gradient(to right, var(--colorBG)) !important;
+	background: linear-gradient(to right, var(--fallback-bg-color)) !important;
 }
 
 body, body.pushable {

@@ -567,6 +567,10 @@ p > img:not(.emoji), li > img {
   border-radius: 0;
   border-top: 0;
 }
+#sidebar #author_sidebar {
+  border-radius: 0;
+  border-top: 0;
+}
 
 #sidebar #footer {
   border-radius: 0;
@@ -610,6 +614,9 @@ p > img:not(.emoji), li > img {
 }
 
 #author .sub.header {
+  color: #fff;
+}
+#author_sidebar .sub.header {
   color: #fff;
 }
 /*Header*/

@@ -7,9 +7,11 @@
 {{ end }} 
 {{ define "main" }}
 <div class="ui centered grid">
+    <!-- header looks shit here 
 	<div class="sixteen wide mobile only column">	
 			{{- partial "header.html" . -}}
 	</div>
+    -->
 	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
 		<section class="ui secondary top attached black segment post-head">
 			<h1 class="post-title">
@@ -33,6 +35,7 @@
 			<article class="post-content twemoji">
 				{{ partial "anchor.html" .Content }}
 			</article>
+            ><script async src=/js/lazyload.js></script>
 		</section>
 		<section class="ui secondary attached segment dream-tags">
 			{{- if isset .Params "tags" -}}

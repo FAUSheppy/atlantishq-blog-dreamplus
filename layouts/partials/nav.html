@@ -1,6 +1,8 @@
 <nav class="ui top secondary menu bar">
 	<div class="item">
-		<i class="inverted big link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
+        <a href="/about">
+		    <i class="inverted big link bullseye icon" title="{{ i18n "flip" }}"></i>
+</a>
 	</div>	
 	{{- if not .IsHome -}}
 	<div class="item">
@@ -56,10 +58,16 @@
     -->
 	{{ end }}	
 	{{- if .IsPage -}}
+    <!--
 	<div class="ui container tablet computer only grid">
 		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
 			<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
 		</div>
+    </div>-->
+    <!-- need flip html and css flipper support
+	<div class="ui container mobile  only grid">
+        <i class="inverted big link sidebar icon dream-flip-toggle2" title="test"></i>
 	</div>
+    -->
 	{{ end }}
 </nav>
