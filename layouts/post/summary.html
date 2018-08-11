@@ -1,25 +1,24 @@
 <link rel="preload" href="https://media.atlantishq.de/blog/images/placeholder.png" as="image"></link>
-<noscript>
-    <article class="blog-card none flexbox" style="background-image: url({{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }})">
-	    <img class="image" src="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }}"></img>
-	    <div class="title-content twemoji">
-		    <h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
-	    <div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
-	
-        </div>
-            <div class="utility-info">    
-                <ul class="utility-list">
-		            {{ if .Site.DisqusShortname }}
-                    <li><div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></span></div></li>
-		            {{ end }}
-                    <li><div><span><i class="calendar icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div></li>
-                    <li><div><span><i class="clock icon"></i>{{ .ReadingTime }} min read</span></div></li>
-	            </ul>
-            </div>
-        <div class="color-overlay"></div>
-    </article>
-</noscript>
 <!-- it's not as bad as it looks, basicly it's just the above code, appended to the document if javascript is enabled -->
-<script async  type="text/javascript">
-document.write('<article class="blog-card none flexbox" rrealsrc="url({{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }})" style="background-image: https://media.atlantishq.de/blog/images/placeholder.png"><img class="image jsonly" src="https://media.atlantishq.de/blog/images/placeholder.png" realsrc="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }}"></img>	<div class="title-content twemoji">		<h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>	<div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>    </div>        <div class="utility-info">                <ul class="utility-list">		        {{ if .Site.DisqusShortname }}                <li><div><i class="comment icon"></i><span class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></span></div></li>		        {{ end }}                <li><div><span><i class="calendar icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div></li>                <li><div><span><i class="clock icon"></i>{{ .ReadingTime }} min read</span></div></li>	        </ul>        </div>    <div class="color-overlay"></div></article>')</script>
-<script async  src=/js/lazyload.js></script>
+<article class="blog-card none flexbox" rrealsrc="url({{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }})" style="background-image: https://media.atlantishq.de/blog/images/placeholder.png">
+        <img class="image jsonly" src="https://media.atlantishq.de/blog/images/placeholder.png" realsrc="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }}"></img>
+    <div class="title-content twemoji">
+            <h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
+            <div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
+    </div>
+    <div class="utility-info">
+        <ul class="utility-list">
+                <li>
+                    <div>
+                        <span><i class="calendar icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span><i class="clock icon"></i>{{ .ReadingTime }} min read</span></div>
+                </li>
+                </ul>
+    </div>
+    <div class="color-overlay"></div>
+</article>
+<script defer  src=/js/lazyload.js></script>

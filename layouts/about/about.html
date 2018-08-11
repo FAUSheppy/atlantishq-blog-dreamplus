@@ -1,0 +1,11 @@
+{{ define "title" }}
+About
+{{ end }}
+
+{{ define "frontmenu" }}
+{{ partial "nav.html" . }}
+{{ end }}
+
+{{ define "main" }}
+{{- partial "about.html" . -}}
+{{ end }}

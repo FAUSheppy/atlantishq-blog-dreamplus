@@ -1,5 +1,11 @@
-<div class="ui inverted segment">
-	<article class="twemoji">
-		{{- readFile "/content/about.md" | markdownify | emojify -}}
-	</article>
+<div class="ui centered grid about">
+	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+		<section class="ui stacked segments">
+			<div class="ui inverted segment">
+				<article class="twemoji">
+				{{- readFile "/content/about.md" | markdownify | emojify -}}
+				</article>
+			</div>
+		</section>
+	</div>
 </div>

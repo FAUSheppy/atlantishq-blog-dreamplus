@@ -7,24 +7,23 @@
     <meta name="description" content="Blog about tech, software and gaming." />
 
     <!-- commented out shit gets http2 pushed by nginx -->
+    <link rel="stylesheet preload" href="https://media.atlantishq.de/blog/semantic.css" as="style">
     <!-- preload stylesheets -->
     <link rel="stylesheet preload" href="/css/main-style.css" as="style">
-    <link rel="stylesheet preload" href="https://media.atlantishq.de/blog/semantic.css" as="style">
     <link rel="stylesheet preload" href="/css/body-pushable.css" as="style">
     <link rel="stylesheet preload" href="/css/site.css" as="style">
-
     <!-- preload scripts -->
     <!-- <script defer rel="preload" src="https://media.atlantishq.de/blog/semantic.min.js"></script> -->
     <!-- <script defer rel="preload" src="https://media.atlantishq.de/blog/jquery.min.js"></script> -->
 	<!-- no idea but doesnt work if done here -->
 
     <!-- <script defer rel="prefetch" src="/js/site.js"></script> -->
-    <script defer rel="prefetch" src="https://media.atlantishq.de/blog/count.js"></script>
     <link rel="preload" href="https://media.atlantishq.de/blog/themes/default/assets/fonts/icons.woff2" as="font-woff2">
     <link rel="preload" href="https://media.atlantishq.de/blog/themes/default/assets/fonts/outline-icons.woff2" as="font-woff2">
 
     <!-- preload fonts -->
     <!--
+    <script defer rel="prefetch" src="https://media.atlantishq.de/blog/count.js"></script>
     <link rel="prefetch" href="/fonts/AbrilFatface-Regular.otf" as="font/opentype" lazyload>
     <link rel="prefetch" href="/fonts/Inconsolata.otf" as="font/opentype" lazyload>
     <link rel="prefetch" href="/fonts/BebasNeue Regular.otf" as="font/opentype" lazyload>
@@ -45,15 +44,12 @@
 </head>
 
 <body>
-    <script src=/js/background.js></script>
+        <!--<script src=/js/background.js></script>-->
 	{{- partial "sidebar.html" . -}}
 	<div id="main_scrollable" class="pusher">
 		<div class="flipper">
 			<div class="front">
 				{{- block "frontmenu" . -}}{{ end }}{{- block "main" . -}}{{ end }}
-			</div>
-			<div class="back">
-				{{- partial "flip.html" . -}}
 			</div>
 		</div>
 	</div>

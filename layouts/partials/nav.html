@@ -32,6 +32,15 @@
 		</a>
     </div>
 	{{ end }}
+
+	{{- if .Site.Social.email -}}
+	<div class="item">
+		<a href="mailto:{{- .Site.Social.email -}}">
+			<i id="ico" class="inverted big link mail icon" title="Email"></i>
+		</a>
+	</div>
+	{{ end }}
+
 	{{- if not (eq .Section .Site.Params.contentType) -}}
 	{{ $paginator := .Paginate (where .Data.Pages "Type" .Site.Params.contentType ) (index .Site.Params "paginate" | default .Site.Params.itemsPerPage) }}
     <!--
