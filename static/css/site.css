@@ -108,7 +108,7 @@ body, body.pushable {
 }
 
 .anchor {
-  visibility: hidden;
+  visibility: visible;
 }
 
 h1:hover .anchor,
