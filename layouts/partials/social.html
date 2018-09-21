@@ -5,6 +5,13 @@
 	</a>
 </div>
 {{ end }}
+{{- if .Site.Social.gitlab -}}
+<div class="item">
+	<a href="https://gitlab.com/{{- .Site.Social.gitlab -}}" target="_blank">
+		<i id="ico" class="inverted big link github icon" title="GitLab"></i>
+	</a>
+</div>
+{{ end }}
 {{- if .Site.Social.email -}}
 <div class="item">
 	<a href="mailto:{{- .Site.Social.email -}}">
