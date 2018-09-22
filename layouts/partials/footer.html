@@ -1,7 +1,8 @@
+<br/>
+<i><small>For privacy statement and legal information press the bullseye icon in the top left corner.<br/></small></i>
+
 {{- if .Site.Params.siteStartYear -}}
 <p>© {{ if eq now.Year .Site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ .Site.Params.siteStartYear }} - {{ now.Year }}{{ end }} {{ .Site.Title }}</p>
 {{ else }}
 <p>© {{ now.Year }} {{ .Site.Title }}</p>
 {{ end }}    
-<p>Created with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> static site generator.</p>
-<i><small>For privacy statement and legal information press the bullseye icon in the top left corner.<br/></small></i>
