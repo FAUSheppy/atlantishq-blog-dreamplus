@@ -34,12 +34,20 @@
 	{{ end }}
 
 	{{- if .Site.Social.email -}}
-	<div class="item">
+	<div class="item right">
 		<a href="mailto:{{- .Site.Social.email -}}">
-			<i id="ico" class="inverted big link mail icon" title="Email"></i>
+			<i id="mail-to" class="inverted big link mail icon" title="Email"></i>
 		</a>
 	</div>
 	{{ end }}
+	{{- if .Site.Social.gitlab -}}
+    <div class="item">
+      <a href="https://gitlab.com/{{- .Site.Social.gitlab -}}" rel="noreferrer" target="_blank">
+        <i id="gitlab-link" class="inverted big link gitlab icon" title="Sheppy's GitLab"></i>
+      </a>
+    </div>
+	{{ end }}
+
 
 	{{- if not (eq .Section .Site.Params.contentType) -}}
 	{{ $paginator := .Paginate (where .Data.Pages "Type" .Site.Params.contentType ) (index .Site.Params "paginate" | default .Site.Params.itemsPerPage) }}
