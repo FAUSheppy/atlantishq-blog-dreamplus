@@ -895,7 +895,7 @@ p > img:not(.emoji), li > img {
 
 .color-overlay {
   position: absolute;
-  background: rgba(0, 0, 0,0.4);
+  background: rgba(0, 0, 0,0.5);
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -910,3 +910,8 @@ p > img:not(.emoji), li > img {
 .blog-card:hover .color-overlay {
   background: rgba(0, 0, 0, 0.6);
 }
+
+div.horizontal-list { 
+  float: middle;
+}
+
