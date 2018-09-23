@@ -12,9 +12,10 @@ function getSize(){
 
 /* check if browser is capable of webp */
 function supportsWebp() {
-  if (!self.createImageBitmap) return false;
-  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
-  return createImageBitmap(webpData).then(() => true, () => false);
+  return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  //if (!self.createImageBitmap) return false;
+  //const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+  //return createImageBitmap(webpData).then(() => true, () => false);
 }
 var webP = supportsWebp()
 
