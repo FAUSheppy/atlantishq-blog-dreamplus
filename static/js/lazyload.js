@@ -1,6 +1,12 @@
 /* determine which size of image to load */
 function getSize(){
-	console.log(screen.width/window.devicePixelRatio)
+    trueRes = screen.width/window.devicePixelRatio
+	if(trueRes > 1920)
+        return ''
+    else if(trueRes <= 1920 && trueRes >= 1200)
+        return '-640x480'
+    else
+        return '-320x240'
 }
 
 
@@ -19,9 +25,13 @@ function changeSrc(offset){
             var boundingClientRect = elements[i].getBoundingClientRect();
             if (elements[i].hasAttribute("rrealsrc") && boundingClientRect.top < window.innerHeight +offset) {
 				var newSrc = elements[i].getAttribute("rrealsrc")
+				newSrc = newSrc.substring(4,newSrc.length-1)
+
+                /* get correct size */
+                newSrc += getSize()
+
 				/* load webP if supported */
 				if(webP){
-					newSrc = newSrc.substring(4,newSrc.length-1)
 					newSrc = newSrc  + '.webp'
 				}
                 elements[i].setAttribute("src", newSrc);
