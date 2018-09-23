@@ -26,15 +26,18 @@ function changeSrc(offset){
             var boundingClientRect = elements[i].getBoundingClientRect();
             if (elements[i].hasAttribute("rrealsrc") && boundingClientRect.top < window.innerHeight +offset) {
 				var newSrc = elements[i].getAttribute("rrealsrc")
-				newSrc = newSrc.substring(4,newSrc.length-1)
+                if(!newSrc.includes(".png")){
+                    /* remove url( ... ) */
+				    newSrc = newSrc.substring(4,newSrc.length-1)
 
-                /* get correct size */
-                newSrc += getSize()
+                    /* get correct size */
+                    newSrc += getSize()
 
-				/* load webP if supported */
-				if(webP){
-					newSrc = newSrc  + '.webp'
-				}
+				    /* load webP if supported */
+				    if(webP){
+				    	newSrc = newSrc  + '.webp'
+				    }
+                }
                 elements[i].setAttribute("src", newSrc);
                 elements[i].style.backgroundImage = 'url(' + newSrc +')';
                 elements[i].removeAttribute("rrealsrc");
