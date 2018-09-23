@@ -1,7 +1,6 @@
-<link rel="preload" href="https://media.atlantishq.de/blog/images/placeholder.png" as="image"></link>
-<!-- it's not as bad as it looks, basicly it's just the above code, appended to the document if javascript is enabled -->
-<article class="blog-card none flexbox" rrealsrc="url({{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }})" style="background-image: https://media.atlantishq.de/blog/images/placeholder.png">
-        <img class="image jsonly" src="https://media.atlantishq.de/blog/images/placeholder.png" realsrc="{{ if .Params.cover }}{{ .Params.cover }}{{ else }}/img/default{{ index (shuffle (seq 1 6)) 0 }}.jpg{{ end }}"></img>
+<!--<link rel="preload" href="placeholder.png" as="image"></link>-->
+<article class="blog-card none flexbox" rrealsrc="url(/{{ .Params.cover }})" style="/placeholder.svg">
+        <img class="image jsonly" src="/placeholder.svg" realsrc="url(/{{ .Params.cover }})"></img>
     <div class="title-content twemoji">
             <h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
             <div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
@@ -21,4 +20,3 @@
     </div>
     <div class="color-overlay"></div>
 </article>
-<script defer  src=/js/lazyload.js></script>
