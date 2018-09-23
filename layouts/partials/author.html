@@ -1,6 +1,6 @@
 <div class="ui small circular image">
 	{{- if .Site.Params.avatar }}
-    <img alt= "" src="https://media.atlantishq.de/blog/images/placeholder.png" rrealsrc="url({{ .Site.Params.avatar }})">
+    <img alt= "" src="/placeholder.svg" rrealsrc="url(/{{ .Site.Params.avatar }})">
 	{{- else -}}
 	{{- .Scratch.Set "avatar" (index (shuffle (seq 1 4)) 0 ) -}}
 	<img alt= "" src="/img/avatar{{ .Scratch.Get `avatar` }}.svg">

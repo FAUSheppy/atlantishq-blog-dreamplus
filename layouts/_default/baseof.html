@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="ycPIAJ1hjNgMlY1plkwZ69DYTpSLrtSNdecInzDzUls" />
     <meta name="description" content="Blog about tech, software and gaming." />
+    <meta name="theme-color" content="#e1850e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <!-- commented out shit gets http2 pushed by nginx -->
     <link rel="stylesheet preload" href="https://media.atlantishq.de/blog/semantic.css" as="style">
@@ -13,6 +16,7 @@
     <link rel="stylesheet preload" href="/css/body-pushable.css" as="style">
     <link rel="stylesheet preload" href="/css/site.css" as="style">
     <script defer src=/js/lazyload.js></script>
+    <script defer src=/js/service-worker.js></script>
     <!-- preload scripts -->
     <!-- <script defer rel="preload" src="https://media.atlantishq.de/blog/semantic.min.js"></script> -->
     <!-- <script defer rel="preload" src="https://media.atlantishq.de/blog/jquery.min.js"></script> -->
@@ -58,6 +62,11 @@
 	{{- partial "init_body.html" . -}}
 	{{- partial "shortest.html" . -}}
 	{{- partial "twemoji.html" . -}}
+<!--<script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/js/service-worker.js');
+    }
+</script>-->
 </body>
 
 </html>
