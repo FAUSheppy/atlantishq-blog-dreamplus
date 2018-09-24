@@ -18,18 +18,24 @@ function supportsWebp() {
   //return createImageBitmap(webpData).then(() => true, () => false);
 }
 var webP = supportsWebp()
+var elements = null
+var counter = 0
 
 /* function to load images */
 function changeSrc(offset){
-    var elements = document.querySelectorAll("*[rrealsrc]");
-    for (var i = 0; i < elements.length; i++) {
+    /* cache */
+    if(elements == null){
+        elements = document.querySelectorAll("*[rrealsrc]");
+    }
+
+    for (var i = counter; i < elements.length; i++) {
             var boundingClientRect = elements[i].getBoundingClientRect();
             if (elements[i].hasAttribute("rrealsrc") && boundingClientRect.top < window.innerHeight +offset) {
-				var newSrc = elements[i].getAttribute("rrealsrc")
-                if(!newSrc.includes(".png")){
-                    /* remove url( ... ) */
-				    newSrc = newSrc.substring(4,newSrc.length-1)
-
+				        var newSrc = elements[i].getAttribute("rrealsrc")
+                /* remove url( ... ) */
+				        newSrc = newSrc.substring(4,newSrc.length-1)
+                
+                if(newSrc.indexOf(".jpg") > -1){
                     /* get correct size */
                     newSrc += getSize()
 
@@ -41,8 +47,16 @@ function changeSrc(offset){
                 elements[i].setAttribute("src", newSrc);
                 elements[i].style.backgroundImage = 'url(' + newSrc +')';
                 elements[i].removeAttribute("rrealsrc");
+            }else{
+                /* DOM is parsed top down and images are inserted in that order too */
+                /* meaing that once we reach pic that insnt in viewbox none following will be*/
+                counter = i; 
+                return;
             }
         }
+    
+    /* if we got here we are done */
+    counter = elements.length
 
 }
 refresh_handler = function(e) {
