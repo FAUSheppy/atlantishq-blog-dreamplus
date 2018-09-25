@@ -28,12 +28,15 @@ var viewbox_y = -Infinity
 
 /* function to load images */
 function changeSrc(offset){
+  
     /* check if there was a relevant change */
-    var cur_viewbox = -document.getElementById("navbar").getBoundingClientRect()
+    var cur_viewbox = -document.getElementById("navbar").getBoundingClientRect().y
     if(cur_viewbox - viewbox_y < 100){
+        //console.log("löl")
         return;
-    }
-    
+
+    }    
+    console.log("test")
     /* cache viewbox */
     viewbox_y = cur_viewbox
     
@@ -70,12 +73,12 @@ function changeSrc(offset){
         }
     
     /* if we got here we are done */
-    counter = elements.length
+    document.getElementById("main_scrollable").removeEventListener("scroll",refresh_handler);
 
 }
 refresh_handler = function(e) {
-    /* images directly in view first (offset 0)*/
-	changeSrc(0)
+  /* images directly in view first (offset 0)*/
+	//changeSrc(0)
 	/* then load images almost in view */
 	changeSrc(500)
 };
