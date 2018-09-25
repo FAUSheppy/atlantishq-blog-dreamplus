@@ -17,12 +17,26 @@ function supportsWebp() {
   //const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
   //return createImageBitmap(webpData).then(() => true, () => false);
 }
+
+/* cache */
 var webP = supportsWebp()
 var elements = null
 var counter = 0
 
+/* garantuee initall call evaluates to true */
+var viewbox_y = -Infinity
+
 /* function to load images */
 function changeSrc(offset){
+    /* check if there was a relevant change */
+    var cur_viewbox = -document.getElementById("navbar").getBoundingClientRect()
+    if(cur_viewbox - viewbox_y < 100){
+        return;
+    }
+    
+    /* cache viewbox */
+    viewbox_y = cur_viewbox
+    
     /* cache */
     if(elements == null){
         elements = document.querySelectorAll("*[rrealsrc]");
@@ -30,7 +44,7 @@ function changeSrc(offset){
 
     for (var i = counter; i < elements.length; i++) {
             var boundingClientRect = elements[i].getBoundingClientRect();
-            if (elements[i].hasAttribute("rrealsrc") && boundingClientRect.top < window.innerHeight +offset) {
+            if (elements[i].hasAttribute("rrealsrc") && boundingClientRect.top < window.innerHeight + offset) {
 				        var newSrc = elements[i].getAttribute("rrealsrc")
                 /* remove url( ... ) */
 				        newSrc = newSrc.substring(4,newSrc.length-1)
