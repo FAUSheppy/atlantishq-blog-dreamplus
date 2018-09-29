@@ -36,7 +36,7 @@ function changeSrc(offset){
         return;
 
     }    
-    console.log("test")
+
     /* cache viewbox */
     viewbox_y = cur_viewbox
     
