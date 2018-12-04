@@ -1,6 +1,6 @@
 /* determine which size of image to load */
 function getSize(){
-    trueRes = screen.width/window.devicePixelRatio
+    var trueRes = screen.width/window.devicePixelRatio
 	if(trueRes > 1920)
         return ''
     else if(trueRes <= 1920 && trueRes >= 1200)
@@ -76,7 +76,7 @@ function changeSrc(offset){
     document.getElementById("main_scrollable").removeEventListener("scroll",refresh_handler);
 
 }
-refresh_handler = function(e) {
+var refresh_handler = function(e) {
   /* images directly in view first (offset 0)*/
 	//changeSrc(0)
 	/* then load images almost in view */
