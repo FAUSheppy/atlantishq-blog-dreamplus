@@ -1,0 +1,21 @@
+{
+  "name": "AtlantishqHQ Blog",
+  "short_name": "AtlantisBlog",
+  "theme_color": "#e1850e",
+  "background_color": "#f39721",
+  "display": "standalone",
+  "scope": "https://blog.atlantishq.de/",
+  "start_url": "https://blog.atlantishq.de/",
+  "icons": [
+    {
+      "src": "https://media.atlantishq.de/blog/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://media.atlantishq.de/blog/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
