@@ -19,8 +19,13 @@
   }
 }
 
+html {
+    overflow-x: hidden;
+}
+
 @media screen and (max-width: 400px) {
   html {
+    overflow-x: hidden;
     font-size: 12px !important;
   }
 }
