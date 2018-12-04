@@ -20,7 +20,9 @@
 }
 
 html {
+    /* disable the default scrollbar */
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 400px) {
@@ -305,6 +307,7 @@ ul > li {
   color: black;
   font: bold 3rem 'Bebas Neue';
   margin-bottom: 1px;
+  text-decoration: none;
 }
 
 .post-head .sub.header {
@@ -563,6 +566,7 @@ ul > li {
   font: 400 2rem 'Abril Fatface';
   letter-spacing: 1px;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
   /*-webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;*/

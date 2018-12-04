@@ -1,9 +1,9 @@
 <div class="ui small circular image">
 	{{- if .Site.Params.avatar }}
-    <img alt= "avatar" src="/{{ .Site.Params.avatar }}">
+    <img alt="avatar" src="/{{ .Site.Params.avatar }}">
 	{{- else -}}
 	{{- .Scratch.Set "avatar" (index (shuffle (seq 1 4)) 0 ) -}}
-	  <img alt= "avatar" src="/img/avatar{{ .Scratch.Get `avatar` }}.svg">
+	  <img alt="avatar" src="/img/avatar{{ .Scratch.Get `avatar` }}.svg">
 	{{- end }}
 </div>
 <h3 class="ui header">

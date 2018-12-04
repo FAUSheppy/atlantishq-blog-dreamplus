@@ -1,3 +1,5 @@
 {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-<a class="ui label red" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+  <a class="tag-label" 
+      href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}
+  </a>
 {{ end }}

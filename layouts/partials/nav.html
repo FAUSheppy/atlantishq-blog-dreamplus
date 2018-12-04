@@ -1,4 +1,4 @@
-<nav class="ui top secondary menu bar" id="navbar">
+<nav class="navbar" id="navbar">
 	<div class="item">
         <a href="/about">
 		    <i class="inverted big link bullseye icon" title="{{ i18n "flip" }}"></i>
@@ -50,41 +50,6 @@
 
 
 	{{- if not (eq .Section .Site.Params.contentType) -}}
-	{{ $paginator := .Paginate (where .Data.Pages "Type" .Site.Params.contentType ) (index .Site.Params "paginate" | default .Site.Params.itemsPerPage) }}
-    <!--
-	<div class="item">
-		{{ if $paginator.HasPrev }}
-		<a href="{{ $paginator.Prev.URL }}">
-			<i class="inverted big link chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
-		</a>
-		{{ else }}
-		<i class="disabled inverted big chevron circle left icon" title="{{ i18n "prevPage" }}"></i>
-  	{{ end }}
-  </div>
-    -->
-    <!--
-	<div class="item">
-		{{- if $paginator.HasNext -}}
-		<a href="{{ $paginator.Next.URL }}">
-			<i class="inverted big link chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
-		</a>
-		{{ else }}	
-		<i class="disabled inverted big chevron circle right icon" title="{{ i18n "nextPage" }}"></i>
-		{{ end }}
-	</div>
-    -->
+	    {{ $paginator := .Paginate (where .Data.Pages "Type" .Site.Params.contentType ) (index .Site.Params "paginate" | default .Site.Params.itemsPerPage) }}
 	{{ end }}	
-	{{- if .IsPage -}}
-    <!--
-	<div class="ui container tablet computer only grid">
-		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
-			<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
-		</div>
-    </div>-->
-    <!-- need flip html and css flipper support
-	<div class="ui container mobile  only grid">
-        <i class="inverted big link sidebar icon dream-flip-toggle2" title="test"></i>
-	</div>
-    -->
-	{{ end }}
 </nav>

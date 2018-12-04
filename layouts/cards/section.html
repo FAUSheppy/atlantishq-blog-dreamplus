@@ -3,26 +3,7 @@
 {{ end }}
 
 {{ define "frontmenu" }}
-<nav class="ui top secondary menu bar" id="navbar">
-	<div class="item">
-        <a href="/about">
-		    <i class="inverted big link bullseye icon" title="About"></i>
-        </a>
-	</div>
-	<div class="item">
-		<a href="/"><i class="inverted big link home icon" title="{{ i18n "home" }}"></i></a>
-	</div>
-	{{ if .Site.Params.enableTags }}
-	<div class="item">
-		<a href="/tags"><i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i></a>
-	</div>
-	{{ end }}
-	{{ if .Site.Params.enableCategories }}
-	<div class="item">
-		<a href="/categories"><i class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i></a>
-	</div>
-	{{ end }}
-</nav>
+    {{- partial "nav.html" . -}}
 {{ end }}
 
 {{ define "main"}}

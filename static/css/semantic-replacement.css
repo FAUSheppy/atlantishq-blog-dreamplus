@@ -1,0 +1,66 @@
+/* general */
+#content browser {
+ margin-right: -14px !important;
+ overflow-y: scroll;
+ overflow-x: hidden;
+}
+
+/* navbar */
+.navbar {
+  	width: 100%;
+		height: 20px;
+  	background-color: #555;
+}
+.navbar a {
+  	float: left;
+  	padding: 12px;
+  	color: white;
+  	text-decoration: none;
+  	font-size: 17px;
+}
+
+/* header */
+.header-box{
+		height: 400px;
+		width: 400px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+}
+
+.author-box{
+		height: 50%;
+		width:  50%;
+}
+
+.tag-box{
+		height: 20%;
+		width:  90%;
+}
+
+.tag-label{
+		text-decoration: none;
+		background: red;
+		color: white;
+
+		padding-left: 1px;
+		padding-right: 1px;
+
+		margin: 5px;
+		display: inline-block;
+
+		/* round corners */
+		border-radius: 25px;
+}
+
+.category-section{
+		/* unused */
+}
+
+.catefory-box{
+		/* unused */ 
+}
+
+.footer-box{
+		height: 20%;
+		width:  20%;
+}
