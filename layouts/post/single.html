@@ -6,18 +6,22 @@
 {{ partial "nav.html" . }}
 {{ end }} 
 {{ define "main" }}
-<div class="ui centered grid">
-	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
-		<section class="ui secondary top attached black segment post-head">
+<div class="article-wrapper white">
 			<h1 class="post-title">
 				{{ .Title }}
 			</h1>
 			<div class="sub header">
-					<div><span><i class="calendar outline icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span></div>
-					{{- if .Site.DisqusShortname -}}
-					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="{{ .Permalink }}#disqus_thread" class="disqus-comment-count" data-disqus-identifier="{{ .UniqueID }}"></a></span></div>{{- end }}
-					<div><span><i class="clock outline icon"></i>{{ .ReadingTime }} min read</span></div>
-					<div><span><i class="angle double up icon"></i>{{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></div>
+					<div>
+              <span><div class="icon article">&#xf133;</div>{{ .Date.Format "Jan 2, 2006" }}</span>
+          </div>
+					<div>
+              <span><div class="icon article">&#xf017;</div>{{ .ReadingTime }} min read</span></div>
+					<div>
+              <span>
+                  <div class="icon article">&#xf102;</div>
+                  {{ i18n "updateAt" }} {{ dateFormat "Jan 2, 2006" .Lastmod }}
+              </span>
+          </div>
 			</div>
 			<hr>
 			{{- if .Site.Params.enableToc -}}
@@ -32,7 +36,7 @@
 			</article>
             <script async src=/js/lazyload.js></script>
 		</section>
-		<section class="ui secondary attached segment dream-tags">
+		<section>
 			{{- if isset .Params "tags" -}}
 				{{- partial "tags.html" . -}}				
 			{{ else }}
@@ -42,8 +46,6 @@
 		{{- if .Site.Params.enableShareCard -}}
 		<section class="ui secondary {{ if not .Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
 			{{- partial "share.html" . -}}
-		</section>
 		{{ end }}
-	</div>
 </div>
 {{ end }}

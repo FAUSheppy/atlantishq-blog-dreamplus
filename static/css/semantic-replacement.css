@@ -4,6 +4,16 @@
     font-display: swap;
 	  src: url('https://media.atlantishq.de/blog/themes/default/assets/fonts/icons.woff2')
 }
+@font-face{
+	  font-family: Icons-outline;
+    font-display: swap;
+	  src: url('https://media.atlantishq.de/blog/themes/default/assets/fonts/brand-icons.woff2')
+}
+@font-face{
+	  font-family: Icons-brand;
+    font-display: swap;
+	  src: url('https://media.atlantishq.de/blog/themes/default/assets/fonts/outline-icons.woff2')
+}
 
 
 /* general */
@@ -25,10 +35,11 @@ a{
 		color: white;
 		margin-right: 0.5rem;
 }
-
-.clock{
-
+.icon.article{
+    color: rgba(0,0,0,0.6);
+    font-size: 19.6px;
 }
+
 
 /* navbar */
 .navbar {
@@ -95,6 +106,7 @@ a{
 .tag-label{
 		text-decoration: none;
 		background: rgb(219, 40, 40);
+    color: white !important;
 
 		padding: 7px;
 
@@ -122,6 +134,13 @@ a{
 		max-width: 40%;
 }
 
+/* main floating wrapper */
+.float-toplevel {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* cards floating on main page */
 .post-list {
 		height: auto;
@@ -146,5 +165,29 @@ a{
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.article-wrapper.white {
+    background-color: #ececece8;
+    color: rgba(0,0,0,0.6);
+    max-width: 1400px;
+    float: center;
+    margin: auto;
+}
+
+.article-wrapper-floating {
+    background-color: #1b1c1ded;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 15.4px;
+    color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: auto;
+    margin-top: 10px;
     padding: 10px;
+    width: 60%;
 }

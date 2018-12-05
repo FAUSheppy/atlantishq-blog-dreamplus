@@ -7,12 +7,9 @@
 {{ end }}
 
 {{ define "main"}}
-<div class="ui centered grid">
-	<div class="sixteen wide mobile fifteen wide tablet four wide computer column">
+<div class="toplevel-float">
     {{ partial "header.html" . }}
-	</div>
-	<div class="sixteen wide mobile fifteen wide tablet eleven wide computer column post-list">
-		<div class="ui inverted segment">
+		<div class="article-wrapper-floating">
 			<h2 class="ui header">
 				{{ i18n "allCategories" }}<hr>
 			</h2>
@@ -30,6 +27,5 @@
 			</ul>
 			{{ end }}
 		</div>
-	</div>
 </div>
 {{ end }}
