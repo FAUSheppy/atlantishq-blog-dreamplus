@@ -1,8 +1,8 @@
 /* fonts */
 @font-face{
-	font-family: Icons;
-  font-display: swap;
-	src: url('https://media.atlantishq.de/blog/themes/default/assets/fonts/icons.woff2')
+	  font-family: Icons;
+    font-display: swap;
+	  src: url('https://media.atlantishq.de/blog/themes/default/assets/fonts/icons.woff2')
 }
 
 
@@ -15,8 +15,8 @@ body{
 		margin: 0
 }
 a{
-        color: #4183c4;
-        text-decoration: none;
+    color: #4183c4;
+    text-decoration: none;
 }
 
 /* icons */
@@ -134,4 +134,17 @@ a{
 		margin-right: 1rem;
 		margin-left:  0rem;
 		flex-wrap:		wrap;
+}
+
+/* article view */
+.article-wrapper {
+    background-color: #1b1c1ded;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 15.4px;
+    color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
