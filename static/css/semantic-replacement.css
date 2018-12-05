@@ -1,6 +1,7 @@
 /* fonts */
 @font-face{
 	font-family: Icons;
+  font-display: swap;
 	src: url('https://media.atlantishq.de/blog/themes/default/assets/fonts/icons.woff2')
 }
 
