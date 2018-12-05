@@ -500,6 +500,9 @@ ul > li {
   z-index: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  
+  height: fit-content;
+  max-width: 500px;
 }
 
 .blog-card:hover {
