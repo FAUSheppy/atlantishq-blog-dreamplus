@@ -1,22 +1,37 @@
-<!--<link rel="preload" href="placeholder.png" as="image"></link>-->
 <article class="blog-card none flexbox" rrealsrc="url(/{{ .Params.cover }})" style="/placeholder.svg">
-        <img class="image jsonly" src="/placeholder.svg" rrealsrc="url(/{{ .Params.cover }})"></img>
+  <img class="image jsonly" src="/placeholder.svg" rrealsrc="url(/{{ .Params.cover }})"></img>
     <div class="title-content twemoji">
-            <h3><a class="title" href={{ .Permalink }}>{{ .Title }}</a></h3>
-            <div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
+
+      <h3>
+        <a class="title" href={{ .Permalink }}>{{ .Title }}</a>
+      </h3>
+
+      <div class="intro twemoji">
+        {{ if isset .Params "description" }}
+          {{ .Params.description | emojify  | markdownify }}
+        {{ else }}
+          <br><br>
+        {{ end }}
+      </div>
     </div>
+
     <div class="utility-info">
-        <ul class="utility-list">
-                <li>
-                    <div>
-                        <span><i class="calendar icon"></i>{{ .Date.Format "Jan 2, 2006" }}</span>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span><i class="clock icon"></i>{{ .ReadingTime }} min read</span></div>
-                </li>
-                </ul>
-    </div>
-    <div class="color-overlay"></div>
+      <ul class="utility-list">
+
+        <li>
+          <div>
+            <span><div class="icon">&#xf133;</div>{{ .Date.Format "Jan 2, 2006" }}</span>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <span><div class="icon">&#xf017;</div>{{ .ReadingTime }} min read</span>
+          </div>
+        </li>
+
+       </ul>
+     </div>
+
+  <div class="color-overlay"></div>
 </article>

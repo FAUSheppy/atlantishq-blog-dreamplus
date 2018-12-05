@@ -39,11 +39,7 @@
 
 <body>
 	<div id="main_scrollable" class="pusher">
-		<div class="flipper">
-			<div class="front">
 				{{- block "frontmenu" . -}}{{ end }}{{- block "main" . -}}{{ end }}
-			</div>
-		</div>
 	</div>
 	{{- partial "init_body.html" . -}}
 	{{- partial "shortest.html" . -}}

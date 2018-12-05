@@ -335,12 +335,6 @@ ul > li {
   overflow-x: auto;
 }
 
-.post-list {
-  height: auto;
-  width: auto;
-  overflow: hidden;
-}
-
 .post-content {
   font-size: 1.1rem;
 }
@@ -492,6 +486,7 @@ ul > li {
 /*Card settings*/
 .blog-card {
   position: relative;
+  overflow: hidden;
   margin-bottom: 1rem;
   margin-right: 0.5em;
   margin-left: 0.5em;

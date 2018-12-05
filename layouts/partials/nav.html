@@ -1,49 +1,42 @@
 <nav class="navbar" id="navbar">
-	<div class="item">
+	<div class="nav-item">
         <a href="/about">
-		    <i class="inverted big link bullseye icon" title="{{ i18n "flip" }}"></i>
+		    <div class="icon" title="{{ i18n "flip" }}">&#xf140;</div>
         </a>
 	</div>	
 	{{- if not .IsHome -}}
-	<div class="item">
+	<div class="nav-item">
 		<a href="/">
-			<i class="inverted big link home icon" title="Home"></i>
+			<div class="icon" title="Home">&#xf015;</div>
 		</a>
 	</div>
 	{{ end }}	
 	{{- if gt (len (where .Site.RegularPages "Section" "==" .Site.Params.contentType)) 0 -}}
-	<div class="item">
+	<div class="nav-item">
 		<a href="/{{ .Site.Params.contentType }}">
-			<i class="inverted big link archive icon" title="{{ i18n "archives" }}"></i>
+			<div class="icon" title="{{ i18n "archives" }}">&#xf187;</div>
 		</a>
 	</div>
 	{{ end }}	
 	{{- if .Site.Params.enableTags -}}
-	<div class="item">
+	<div class="nav-item">
 		<a href="/tags">
-			<i class="inverted big link tags icon" title="{{ i18n "allTags" }}"></i>
+			<div class="icon" title="{{ i18n "allTags" }}">&#xf02c;</div>
 		</a>
 	</div>
 	{{ end }}	
-	{{- if .Site.Params.enableCategories -}}
-	<div class="item">
-		<a href="/categories">
-			<i class="inverted big link cubes icon" title="{{ i18n "allCategories" }}"></i>
-		</a>
-    </div>
-	{{ end }}
 
 	{{- if .Site.Social.email -}}
-	<div class="item right">
+	<div class="nav-item float-right">
 		<a href="mailto:{{- .Site.Social.email -}}">
-			<i id="mail-to" class="inverted big link mail icon" title="Email"></i>
+			<div id="mail-to" class="icon" title="Email">email</div>
 		</a>
 	</div>
 	{{ end }}
 	{{- if .Site.Social.gitlab -}}
-    <div class="item">
+    <div class="nav-item float-right">
       <a href="https://gitlab.com/{{- .Site.Social.gitlab -}}" rel="noreferrer" target="_blank">
-        <i id="gitlab-link" class="inverted big link gitlab icon" title="Sheppy's GitLab"></i>
+        <div id="gitlab-link" class="icon" title="Sheppy's GitLab">gitlab</div>
       </a>
     </div>
 	{{ end }}
