@@ -251,6 +251,14 @@ li:not('.toc') {
 
 .ui.inverted.segment {
   background-color: #1b1c1ded;
+  /* added dezember 18 */
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 15.4px;
+  color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
 }
 
 .ui.secondary.segment {
@@ -278,10 +286,10 @@ ul > li {
   height: auto;
   overflow-y: hidden;
 }
-
+/*
 .about .twemoji {
   font-size: 1.1rem;
-}
+}*/
 
 .four-o-four .twemoji {
   text-align: center;
