@@ -201,12 +201,6 @@ li:not('.toc') {
   flex: 1 0 auto;
 }
 
-.post-list .cards {
-  margin-right: -1rem;
-  margin-left: -1rem;
-  flex-wrap: wrap;
-}
-
 .glass {
   position: absolute;
   overflow: hidden;

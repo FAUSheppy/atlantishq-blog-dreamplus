@@ -2,24 +2,13 @@
 		<header id="author" class="author-box">
 			{{- partial "author.html" . -}}
 		</header>
-		<div id="tag-category" class="{{ if not .IsPage }}active{{ end }} content">
-			{{- if .Site.Params.enableTags -}}
-			{{- if .Site.Taxonomies.tags -}}
-			<section class="tag-box">
-				{{- partial "tags.html" . -}}
-			</section>
-			{{- end -}}
-			{{- end -}}
-			{{- if .Site.Params.enableCategories -}}
-			{{- if .Site.Taxonomies.categories -}}
-			<section class="category-section">
-			    <div class="category-box">
-				    {{- partial "categories.html" . -}}
-			    </div>
-			</section>
-			{{- end -}}
-			{{- end -}}
-		</div>
+		{{- if .Site.Params.enableTags -}}
+		    {{- if .Site.Taxonomies.tags -}}
+		        <section class="tag-box">
+			          {{- partial "tags.html" . -}}
+		        </section>
+		    {{- end -}}
+		{{- end -}}
 		<footer class="footer-box">
 			{{- partial "footer.html" . -}}
 		</footer>

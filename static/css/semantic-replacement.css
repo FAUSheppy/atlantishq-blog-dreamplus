@@ -1,8 +1,7 @@
 /* general */
 #content browser {
- margin-right: -14px !important;
- overflow-y: scroll;
- overflow-x: hidden;
+		overflow-y: scroll;
+		overflow-x: hidden;
 }
 
 /* navbar */
@@ -13,54 +12,82 @@
 }
 .navbar a {
   	float: left;
-  	padding: 12px;
-  	color: white;
   	text-decoration: none;
-  	font-size: 17px;
 }
 
 /* header */
 .header-box{
-		height: 400px;
+		/* height: 400px; */
 		width: 400px;
+
+		text-align: center;
+
 		padding-top: 10px;
 		padding-bottom: 10px;
+
+		margin-top: 10px;
+		margin-bottom: 10px;
+		
+		background-color:rgba(0, 0, 0, 0.75);
+		color: white;
+		border-radius: 5px;
+
+		font-family:	Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 .author-box{
-		height: 50%;
-		width:  50%;
+
+}
+
+.author-name{
+
+}
+
+.author-motto{
+		font-size: 0.8em;
+		font-weight: normal;
 }
 
 .tag-box{
-		height: 20%;
-		width:  90%;
+		border-top: 		2px solid #555;
+		border-bottom: 	2px solid #555;
+		padding-top: 		10px;
+		padding-bottom: 10px;
 }
 
 .tag-label{
 		text-decoration: none;
-		background: red;
-		color: white;
+		background: rgb(219, 40, 40);
 
-		padding-left: 1px;
-		padding-right: 1px;
+		padding: 7px;
 
 		margin: 5px;
 		display: inline-block;
 
-		/* round corners */
-		border-radius: 25px;
-}
+		border-radius: 5px;
+		color: inherit;
 
-.category-section{
-		/* unused */
-}
-
-.catefory-box{
-		/* unused */ 
+		font-size: 12px;
+		font-weight: 700;
 }
 
 .footer-box{
-		height: 20%;
-		width:  20%;
+		font-size: 80%;
+}
+
+.avatar-box{
+
+}
+
+.avatar-box img{
+		border-radius: 500rem;
+		max-height: 100%;
+		max-width: 40%;
+}
+
+/* cards floating on main page */
+.post-list .cards{
+		margin-right: 1rem;
+		margin-left:  0rem;
+		flex-wrap:		wrap;
 }
