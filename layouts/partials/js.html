@@ -1,12 +1,4 @@
-<!-- <script defer src="/js/site.js"></script> -->
-<!-- defer semantic scripts cause makes no sense to run the before jquery -->
-<!-- 
-<script defer src="https://media.atlantishq.de/blog/jquery.min.js"></script>
-<script defer src="https://media.atlantishq.de/blog/semantic.min.js"></script>
--->
-{{- if .Site.Params.twitterEmoji -}}
-<!--	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script> -->
-{{ end }}
+<!-- TODO create structured data on the fly -->
 {{- range $type, $val:= .Site.Params.customJS }}
 	{{- if and ((gt (len $val) 0) (index $val "")) -}}
         <script async src="/{{ index $val }}"></script>
