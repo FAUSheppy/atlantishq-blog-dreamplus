@@ -43,9 +43,5 @@
 			<span>{{ i18n "noTag" }}</span>
 			{{ end }}
 		</section>
-		{{- if .Site.Params.enableShareCard -}}
-		<section class="ui secondary {{ if not .Site.DisqusShortname }}bottom{{ end }} attached segment share row box">
-			{{- partial "share.html" . -}}
-		{{ end }}
 </div>
 {{ end }}
