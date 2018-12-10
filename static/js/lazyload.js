@@ -2,7 +2,7 @@
 function getSize(){
     var trueRes = screen.width/window.devicePixelRatio
 	if(trueRes > 1920)
-        return ''
+        return '-640-480'
     else if(trueRes <= 1920 && trueRes >= 1200)
         return '-640x480'
     else
