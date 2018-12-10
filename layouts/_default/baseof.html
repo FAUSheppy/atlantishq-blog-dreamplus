@@ -5,26 +5,22 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="ycPIAJ1hjNgMlY1plkwZ69DYTpSLrtSNdecInzDzUls" />
     <meta name="description" content="AtlantisHQ blog about tech, software and gaming" />
-    <meta name="theme-color" content="#e1850e">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name ="theme_color" content="#e1850e"/>
 
 
-    <!-- commented out shit gets http2 pushed by nginx -->
-    <link rel="stylesheet preload" href="/css/semantic-replacement.css" as="style">
     <!-- preload stylesheets -->
     <link rel="stylesheet preload" href="/css/main-style.css" as="style">
-    <link rel="stylesheet preload" href="/css/body-pushable.css" as="style">
-    <!--<link rel="stylesheet preload" href="/css/site.css" as="style">-->
+
+    <!-- load and execute scripts -->
     <script defer src=/js/lazyload.js></script>
     <script async src=/js/service-worker-loader.js></script>
 
+    <!-- preload fonts -->
     <link rel="preload" href="https://media.atlantishq.de/blog/themes/default/assets/fonts/icons.woff2" crossorigin="anonymous" as="font">
+
     <!-- manifest -->
     <link rel="manifest" href="/manifest.json">
-
-
-    <!-- some style -->
-    <meta name ="theme_color" content="#e1850e"/>
 
     <!-- title -->
     <title> {{- block "title" . -}}{{ .Site.Title }}{{- end -}}</title>
