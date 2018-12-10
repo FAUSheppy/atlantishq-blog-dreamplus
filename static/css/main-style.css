@@ -465,11 +465,11 @@ ul > li {
 
 .blog-card .image {
   visibility: hidden;
-  overflow: hidden;
 
   /* contain images but do not change aspect ratio */
   object-fit: contain;
-
+  
+  /* important for fitting title */
   width: 100%;
   height: 100%;
 }
