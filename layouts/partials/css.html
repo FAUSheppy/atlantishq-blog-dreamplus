@@ -1,8 +1,0 @@
-{{- if and (fileExists "static/css/highlight.css") .IsPage -}}
-	<link rel="stylesheet" type="text/css" href="/css/highlight.css">
-{{- end -}}
-{{- range $type, $val:= .Site.Params.customCSS -}}
-{{- if and ((gt (len $val) 0) (index $val "")) -}}
-	<link rel="stylesheet" type="text/css" href="/{{ index $val }}">
-{{- end -}}
-{{- end -}}
