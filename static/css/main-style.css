@@ -331,6 +331,8 @@ h9:hover .anchor {
 
 ul > li {
   margin-bottom: 0.2rem;
+  /* remove bullet points */
+  list-style-type: none;
 }
 
 /*Post settings*/
