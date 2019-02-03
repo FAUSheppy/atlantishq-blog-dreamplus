@@ -457,6 +457,7 @@ ul > li {
   height: fit-content;
   max-width: 700px;
   min-width: 400px;
+  max-height: 500px;
 }
 
 .blog-card:hover {
