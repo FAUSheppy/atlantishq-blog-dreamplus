@@ -72,8 +72,8 @@ a{
 .header-box{
 		text-align: center;
 
-    max-width: 600px;
-    min-width: 400px;
+        max-width: 600px;
+        min-width: 400px;
 
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -81,6 +81,7 @@ a{
 		margin-top: 10px;
 		margin-bottom: auto;
 		margin-left: 20px;
+		margin-right: 20px;
 		
 		background-color:rgba(0, 0, 0, 0.75);
 		color: white;
@@ -156,7 +157,8 @@ a{
 .post-list {
 		height: auto;
 		width: auto;
-  	overflow: hidden;
+        margin-top: 10px;
+  	    overflow: hidden;
 		margin-left: 2%;
 		margin-right: 2%;
 }     
@@ -260,9 +262,15 @@ a{
 /* ######################## media-modifiers ######################## */
 /* ######################## responsive css  ######################## */
 /*Computer view*/
-@media screen and (min-width: 991px) {
+@media only screen and (min-width: 1000px) {
   .blog-card {
     width: calc(50% - 1rem);
+  }
+}
+/* half screen */
+@media only screen and (max-width: 1000px) {
+  .blog-card {
+    max-width: 300px;
   }
 }
 
@@ -320,6 +328,7 @@ h9:hover .anchor {
 
 .ui.grid {
   display: flex;
+  flex-wrap: wrap;
   margin-left: 0;
   margin-right: 0;
 }
@@ -455,7 +464,7 @@ ul > li {
   background-size: cover;
   
   height: fit-content;
-  max-width: 700px;
+  max-width: 400px;
   min-width: 400px;
   max-height: 500px;
 }
@@ -552,7 +561,7 @@ ul > li {
   line-height: 1.2rem;
   width: 80%;
   color: #ddd;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
