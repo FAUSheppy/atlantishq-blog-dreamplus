@@ -17,16 +17,16 @@
 
     <div class="utility-info">
       <ul class="utility-list">
-
+        <!-- icon must be in same container as text to be in same line -->
         <li>
           <div>
-            <span><div class="icon">&#xf133;</div>{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span><div class="icon">&#xf133;&nbsp;&nbsp; {{ .Date.Format "Jan 2, 2006" }}</div></span>
           </div>
         </li>
 
         <li>
           <div>
-            <span><div class="icon">&#xf017;</div>{{ .ReadingTime }} min read</span>
+            <span><div class="icon">&#xf017;&nbsp;&nbsp; {{ .ReadingTime }} min read</div></span>
           </div>
         </li>
 
