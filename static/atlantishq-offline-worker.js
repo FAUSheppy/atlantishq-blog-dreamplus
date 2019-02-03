@@ -7,6 +7,7 @@ self.addEventListener('install', function(e) {
                 '/css/main-style.css',
                 '/js/lazyload.js',
                 '/manifest.json',
+                '/img/defaultFac.ico',
               ]);
         })
     );
