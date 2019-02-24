@@ -90,61 +90,6 @@ a{
 		font-family:	Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
-/* ######################## author ######################## */
-.author-box{
-
-}
-
-.author-name{
-        font-size: 3em;
-}
-
-.author-motto{
-		font-size: 1em;
-		font-weight: normal;
-        font-style: italic;
-}
-
-/* ######################## tags ######################## */
-.tag-box{
-		border-top: 		2px solid #555;
-		border-bottom: 	2px solid #555;
-		padding-top: 		10px;
-		padding-bottom: 10px;
-}
-
-.tag-label{
-		text-decoration: none;
-		background: rgb(219, 40, 40);
-    color: white !important;
-
-		padding: 7px;
-
-		margin: 5px;
-		display: inline-block;
-
-		border-radius: 5px;
-		color: inherit;
-
-		font-size: 12px;
-		font-weight: 700;
-}
-
-/* ######################## footer ######################## */
-.footer-box{
-		font-size: 80%;
-}
-
-/* ######################## avatar ######################## */
-.avatar-box{
-
-}
-
-.avatar-box img{
-		border-radius: 500rem;
-		max-height: 100%;
-		max-width: 40%;
-}
 
 /* ######################## floating post-cards ######################## */
 /* main floating wrapper */
@@ -471,6 +416,7 @@ ul > li {
   max-width: 400px;
   min-width: 400px;
   max-height: 305px;
+  min-height: 305px;
 }
 
 /******************************************************/

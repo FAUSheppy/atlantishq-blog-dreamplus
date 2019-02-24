@@ -1,12 +1,12 @@
-<div class="avatar-box">
-	{{- if .Site.Params.avatar }}
-    <img alt="avatar" src="/{{ .Site.Params.avatar }}">
-	{{- else -}}
-	{{- .Scratch.Set "avatar" (index (shuffle (seq 1 4)) 0 ) -}}
-	  <img alt="avatar" src="/img/avatar{{ .Scratch.Get `avatar` }}.svg">
-	{{- end }}
-</div>
-<h3 class="author-name">
-	{{- .Site.Params.author }}
-	<div class="author-motto">{{ .Site.Params.motto }}</div>
-</h3>
+<article class="blog-card flexbox" rrealsrc="url(/{{ .Site.Params.avatar }})" style="/placeholder.svg">
+  <img class="image jsonly" src="/placeholder.svg" rrealsrc="url(/{{ .Site.Params.avatar }})"></img>
+  <div class="title-content">
+    <h3 class="title">
+    	{{- .Site.Params.author }}
+    </h3>
+    <div class="subtitle">
+      {{- .Site.Params.motto }}
+    </div>
+  </div>
+  <div class="color-overlay"></div>
+</article>

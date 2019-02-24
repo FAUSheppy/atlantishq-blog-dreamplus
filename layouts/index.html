@@ -4,9 +4,9 @@
 
 {{ define "main"}}
 <div class="ui grid">
-	{{ partial "header.html" . }}
 	<div class="post-list">
 		<div class="cards row box">
+	    {{ partial "author.html" . }}
 			{{ partial "pagination.html" . }}
 		</div>
 	</div>

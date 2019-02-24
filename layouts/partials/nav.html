@@ -11,13 +11,6 @@
 		</a>
 	</div>
 	{{ end }}	
-	{{- if gt (len (where .Site.RegularPages "Section" "==" .Site.Params.contentType)) 0 -}}
-	<div class="nav-item">
-		<a href="/{{ .Site.Params.contentType }}">
-			<div class="icon" title="{{ i18n "archives" }}">&#xf187;</div>
-		</a>
-	</div>
-	{{ end }}	
 	{{- if .Site.Params.enableTags -}}
 	<div class="nav-item">
 		<a href="/tags">
