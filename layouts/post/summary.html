@@ -6,13 +6,7 @@
         <a class="title" href={{ .Permalink }}>{{ .Title }}</a>
       </h3>
 
-      <div class="intro">
-        {{ if isset .Params "description" }}
-          {{ .Params.description | emojify  | markdownify }}
-        {{ else }}
-          <br><br>
-        {{ end }}
-      </div>
+      <div class="intro">{{ .Params.description | emojify  | markdownify }}</div>
     </div>
 
     <div class="utility-info">
