@@ -446,7 +446,10 @@ ul > li {
   padding: 0;
 }
 
-/*Card settings*/
+/******************************************************/
+/******************* Summary Card *********************/
+/******************************************************/
+
 .blog-card {
   position: relative;
   overflow: hidden;
@@ -470,11 +473,9 @@ ul > li {
   max-height: 305px;
 }
 
-.blog-card:hover {
-  -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 1);
-  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
-}
+/******************************************************/
+/************** Summary Card Image ********************/
+/******************************************************/
 
 .blog-card .image {
   visibility: hidden;
@@ -487,34 +488,37 @@ ul > li {
   height: 100%;
 }
 
-.title-content {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 2rem;
-  text-align: center;
-  z-index: 2;
-  width: 100%;
-  /* move up transition */
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-}
- 
-.card.title-content {
-  opacity: 0;
-  bottom: 0;
-}
+/******************************************************/
+/********* Hover-Baselines and Modifiers **************/
+/******************************************************/
 
-.blog-card:hover .card.title-content {
+.blog-card .subtitle{
+  opacity: 0;
+
+}
+.blog-card:hover .subtitle{
   opacity: 1;
-  bottom: 0;
 }
 
 .blog-card:hover .title-content {
   bottom: 5rem;
 }
 
-.blog-card .title {
+.blog-card:hover .child {
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
+}
+
+.blog-card:hover {
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1);
+}
+
+/******************************************************/
+/*********** TEXT CONTENTS SUMMARY CARD ***************/
+/******************************************************/
+
+.title {
   color: #fff;
   font: 400 2rem 'Abril Fatface';
   letter-spacing: 1px;
@@ -522,47 +526,27 @@ ul > li {
   text-decoration: none;
 }
 
-
-/* seperator line */
-.blog-card h3:after {
-  content: " ";
-  display: block;
-  width: 10%;
-  height: 0.2rem;
-  margin: 0.5em auto;
-  border: 0;
+.title-content {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+  text-align: center;
   z-index: 2;
-  background: #BDA26B;
+  width: 100%;
+
+  /* move up transition */
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-/* seperator line */
-.blog-card:hover h3:after {
-  animation: changeLetter 0.3s 1 linear;
-  width: 80%;
-}
-
-@keyframes changeLetter {
-  0% {
-    width: 10%;
-  }
-
-  100% {
-    width: 80%;
-  }
-}
-
-
-/* visibility of subtitle */
-.intro {
+.subtitle {
   margin: auto;
   font: 200 1.2rem 'Droid Serif Italic';
   line-height: 1.2rem;
   width: 80%;
   color: #ddd;
-  opacity: 0;
+  /* opacity: 0; */
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
@@ -584,10 +568,40 @@ ul > li {
   background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.1) 21%);
 }
 
-.blog-card:hover .utility-info {
-  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
+
+.blog-card seperator-line:after {
+  content: " ";
+  display: block;
+  width: 10%;
+  height: 0.2rem;
+  margin: 0.5em auto;
+  border: 0;
+  z-index: 2;
+  background: #BDA26B;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
+.blog-card:hover seperator-line:after {
+  animation: seperatorChangeLetter 0.3s 1 linear;
+  width: 80%;
+}
+
+@keyframes seperatorChangeLetter {
+  0% {
+    width: 10%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+
+/******************************************************/
+/******** Summary Blog-Card Color Overlay *************/
+/******************************************************/
 
 .color-overlay {
   position: absolute;
@@ -602,6 +616,7 @@ ul > li {
   -o-transition: background 0.4s cubic-bezier(0.33, 0.66, 0.66, 1);
   transition: background 0.4s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
+
 .card.color-overlay {
   background: rgba(0, 0, 0 ,0);
 }
