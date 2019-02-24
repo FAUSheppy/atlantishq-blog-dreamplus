@@ -569,7 +569,7 @@ ul > li {
 }
 
 
-.blog-card seperator-line:after {
+.blog-card h3:after {
   content: " ";
   display: block;
   width: 10%;
@@ -583,7 +583,7 @@ ul > li {
   transition: all 0.4s;
 }
 
-.blog-card:hover seperator-line:after {
+.blog-card:hover h3:after {
   animation: seperatorChangeLetter 0.3s 1 linear;
   width: 80%;
 }
