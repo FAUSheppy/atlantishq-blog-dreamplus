@@ -1,12 +1,12 @@
 <article class="blog-card none flexbox" rrealsrc="url(/{{ .Params.cover }})" style="/placeholder.svg">
   <img class="image jsonly" src="/placeholder.svg" rrealsrc="url(/{{ .Params.cover }})"></img>
-    <div class="title-content twemoji">
+    <div class="title-content">
 
       <h3>
         <a class="title" href={{ .Permalink }}>{{ .Title }}</a>
       </h3>
 
-      <div class="intro twemoji">
+      <div class="intro">
         {{ if isset .Params "description" }}
           {{ .Params.description | emojify  | markdownify }}
         {{ else }}

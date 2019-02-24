@@ -1,8 +1,8 @@
 <article class="blog-card none flexbox" rrealsrc="url(/{{ .Params.cover }})" style="/placeholder.svg">
         <img class="image" rrealsrc="url(/{{ .Params.cover }})" src="/placeholder.png"></img>
-        <div class="card title-content twemoji">
+        <div class="card title-content">
 	        <h3><a class="title" href={{ .Params.link }} target="_blank">{{ .Title }}</a></h3>
-	        <div class="intro twemoji">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
+	        <div class="intro">{{ if isset .Params "description" }}{{ .Params.description | emojify  | markdownify }}{{ else }}<br><br>{{ end }}</div>
         </div>
     <div class="card color-overlay"></div>
 </article>

@@ -11,7 +11,7 @@ Page Not Found
 	<div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
 		<section class="ui stacked segments">
 			<div class="ui inverted segment">
-				<article class="twemoji">
+				<article class="">
 					{{ if (fileExists "/content/404.md" ) }}
 						{{ readFile "/content/404.md" | markdownify | emojify }}
 					{{ else }}
