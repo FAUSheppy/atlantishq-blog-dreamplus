@@ -35,6 +35,17 @@ a{
     text-decoration: none;
 }
 
+.tag-label{
+    padding: 5px;
+    margin:  5px;
+    line-height:    2;
+    font-weight:    bold;
+    margin-bottom:  4px;
+    border-radius:  6px;
+    background-color: red;
+    color: white;
+}
+
 /* icons */
 .icon{
 		font-family: Icons;
@@ -170,6 +181,7 @@ a{
 
 /* article view */
 .article-wrapper {
+    list-style: initial;
     background-color: #1b1c1ded;
     font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
     font-size: 15.4px;
@@ -186,6 +198,7 @@ a{
 }
 
 .article-wrapper.white {
+    list-style: initial;
     background-color: #ececece8;
     color: rgba(0,0,0,0.6);
     max-width: 1400px;
@@ -289,8 +302,6 @@ h9:hover .anchor {
 
 ul > li {
   margin-bottom: 0.2rem;
-  /* remove bullet points */
-  list-style-type: none;
 }
 
 /*Post settings*/
