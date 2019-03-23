@@ -202,9 +202,8 @@ a{
     background-color: #ececece8;
     color: rgba(0,0,0,0.6);
     max-width: 1400px;
-    float: center;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    width: 96%;
+    margin: auto;
 }
 
 .article-wrapper-floating {
