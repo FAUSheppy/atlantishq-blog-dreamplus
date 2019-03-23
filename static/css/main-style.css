@@ -44,6 +44,7 @@ a{
     border-radius:  6px;
     background-color: red;
     color: white;
+    white-space: nowrap;
 }
 
 /* icons */
