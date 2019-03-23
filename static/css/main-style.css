@@ -223,15 +223,18 @@ a{
 /* ######################## media-modifiers ######################## */
 /* ######################## responsive css  ######################## */
 /*Computer view*/
-@media only screen and (min-width: 1000px) {
+@media (min-width : 1000px) {
   .blog-card {
-    width: calc(50% - 1rem);
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 375px;
+    min-height: 375px;
   }
 }
 /* half screen */
-@media only screen and (max-width: 1000px) {
+@media (max-width : 1000px) {
   .blog-card {
-    max-width: 300px;
+    width: 98%;
   }
 }
 
@@ -426,10 +429,11 @@ ul > li {
   background-size: cover;
   
   height: fit-content;
-  max-width: 400px;
-  min-width: 400px;
-  max-height: 305px;
-  min-height: 305px;
+  /* Defined in @media now */
+  /* max-width: 400px;  */
+  /* min-width: 300px;  */
+  /* max-height: 305px; */
+  /* min-height: 305px; */
 }
 
 /******************************************************/
