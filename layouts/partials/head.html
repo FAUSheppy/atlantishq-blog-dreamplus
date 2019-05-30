@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="theme-color" content="#ff8c00">
+
 {{- if eq .Type .Site.Params.contentType -}}
 	<!-- Page Author & Description -->
 	<meta name="author" content="{{- if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end -}}" />
@@ -10,8 +10,13 @@
 	<meta name="author" content="{{- .Site.Params.author -}}" />
 	<meta name="description" content="{{- .Site.Params.description -}}" />
 {{- end -}}
+
+<!-- Site Generator -->
+<meta name="generator" content="Hugo {{ .Hugo.Version }}" />
+
 <!--Setting Favicon-->
 <link rel="shortcut icon" href="{{ if .Site.Params.favicon }}{{ .Site.Params.favicon }}{{- else -}}/img/defaultFav.ico{{ end }}">
+
 <!-- Permalink & RSSlink -->
 <link rel="canonical" href="{{- .Permalink -}}" />
 <link rel="alternative" href="{{- "/index.xml" | relURL -}}" title="{{ .Site.Title }}" type="application/atom+xml"/>
