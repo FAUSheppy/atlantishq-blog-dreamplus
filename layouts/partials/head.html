@@ -5,10 +5,18 @@
 	<!-- Page Author & Description -->
 	<meta name="author" content="{{- if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end -}}" />
 	<meta name="description" content="{{- .Summary | plainify -}}" />
+	
+	<!-- OpenGraph Protocol Integration -->
+	<meta property="og:title" content="{{- .Summary | plainify -}}" />
+	<meta property="og:image" content="{{- .Site.Params.websitePreviewPicture }}" />
+	
 {{- else -}}
 	<!-- Site Author & Description -->
 	<meta name="author" content="{{- .Site.Params.author -}}" />
 	<meta name="description" content="{{- .Site.Params.description -}}" />
+	
+	<meta property="og:title" content="{{- .Site.Params.description | plainify -}}" />
+	<meta property="og:image" content="{{- .cover }}" />
 {{- end -}}
 
 <!-- Site Generator -->
