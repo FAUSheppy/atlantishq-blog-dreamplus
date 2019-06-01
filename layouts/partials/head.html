@@ -15,6 +15,15 @@
   <meta property="og:image" content="{{- .Site.Params.baseURL -}}{{- .Site.Params.cover -}}" />
 {{ end }}
 
+<!-- JSON-LD i.e. for google rich-cards -->
+{{ if isset .Params "cover" }}
+  <!-- individual articles -->
+  {{- partial "acticle-JSON-LD.html" . -}}
+{{ else }}
+  <!-- any page without special params -->
+  <!-- {{- partial "root-JSON-LD.html" . -}} -->
+{{ end }}
+
 <!-- Site Generator -->
 <meta name="generator" content="Hugo {{ .Hugo.Version }}" />
 
