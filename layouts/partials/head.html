@@ -6,6 +6,7 @@
 <meta name="description" content="{{- .Summary | plainify -}}" />
 
 <!-- OpenGraph Protocol Integration -->
+<meta property="og:type" content="website">
 {{ if isset .Params "cover" }}
   <meta property="og:title" content="{{- .Params.title | plainify -}}" />
   <meta property="og:image" content="{{- .Site.Params.baseURL -}}{{- .Params.cover -}}" />
