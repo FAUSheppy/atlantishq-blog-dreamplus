@@ -1,23 +1,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-{{- if eq .Type .Site.Params.contentType -}}
-	<!-- Page Author & Description -->
-	<meta name="author" content="{{- if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end -}}" />
-	<meta name="description" content="{{- .Summary | plainify -}}" />
-	
-	<!-- OpenGraph Protocol Integration -->
-	<meta property="og:title" content="{{- .Summary | plainify -}}" />
-	<meta property="og:image" content="{{- .Site.Params.websitePreviewPicture }}" />
-	
-{{- else -}}
-	<!-- Site Author & Description -->
-	<meta name="author" content="{{- .Site.Params.author -}}" />
-	<meta name="description" content="{{- .Site.Params.description -}}" />
-	
-	<meta property="og:title" content="{{- .Site.Params.description | plainify -}}" />
-	<meta property="og:image" content="{{- .cover }}" />
-{{- end -}}
+<!-- Page Author & Description -->
+<meta name="author" content="{{- if isset .Params "author" -}}{{- .Params.author -}}{{- else -}}{{- .Site.Params.author -}}{{- end -}}" />
+<meta name="description" content="{{- .Summary | plainify -}}" />
+
+<!-- OpenGraph Protocol Integration -->
+{{ if isset .Params "cover" }}
+  <meta property="og:title" content="{{- .Params.title | plainify -}}" />
+  <meta property="og:image" content="{{- .Site.Params.baseURL -}}{{- .Params.cover -}}" />
+{{ else }}
+  <meta property="og:title" content="{{- .Site.Params.title | plainify -}}" />
+  <meta property="og:image" content="{{- .Site.Params.baseURL -}}{{- .Site.Params.cover -}}" />
+{{ end }}
 
 <!-- Site Generator -->
 <meta name="generator" content="Hugo {{ .Hugo.Version }}" />
