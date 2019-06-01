@@ -7,12 +7,15 @@
 
 <!-- OpenGraph Protocol Integration -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="{{- .Site.Params.baseURL -}}{{ .Permalink }}" />
 {{ if isset .Params "cover" }}
   <meta property="og:title" content="{{- .Params.title | plainify -}}" />
   <meta property="og:image" content="{{- .Site.Params.baseURL -}}{{- .Params.cover -}}" />
+  <meta property="og:description" content="{{- .Params.description -}}" />
 {{ else }}
   <meta property="og:title" content="{{- .Site.Params.title | plainify -}}" />
   <meta property="og:image" content="{{- .Site.Params.baseURL -}}{{- .Site.Params.cover -}}" />
+  <meta property="og:description" content="{{- .Site.Params.motto -}}" />
 {{ end }}
 
 <!-- Site Generator -->
