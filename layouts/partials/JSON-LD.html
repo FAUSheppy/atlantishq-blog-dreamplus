@@ -1,32 +1,38 @@
-<!-- last line in same-as is to ensure correct syntax concerning the commas -->
-<script type="application/ld+json">
-{
-    "@context": "http://www.schema.org",
-    "@type": "Person",
-    "name": "{{- .Site.Params.author -}}",
-    "url": "{{- .Site.Params.baseURL -}}{{- .Permalink -}}",
-    "sameAs": [
-        {{ if isset .Site.Params "github" }}
-            "https://github.com/{{- .Site.Social.github -}}",
-        {{ end }}
-        {{ if isset .Site.Social "github" }}
-            "https://gitlab.com/{{- .Site.Social.gitlab -}}",
-        {{ end }}
-        {{ if isset .Site.Social "twitter" }}
-            "https://twitter.com/{{- .Site.Social.twitter -}}",
-        {{ end }}
-            "{{ .Site.Params.baseURL }}"
-    ] 
-}
+<!-- articles  -->
 {{ if isset .Params "cover" }}
-{
-    "@context": "http://www.schema.org",
-    "@type": "CreativeWork",
-    "author: "{{- .Site.Params.author -}}",
-    "headline": "{{- .Site.Params.title -}}",
-    "description": "{{- .Site.Params.description -}}",
-    "thumbnailUrl": "{{- .Params.cover -}}",
-    "image": "{{- .Params.cover -}}"
-}
+  <!-- article Pages -->
+  <script type="application/ld+json">
+  {
+      "@context": "http://www.schema.org",
+      "@type": "CreativeWork",
+      "author": "{{- .Site.Params.author -}}",
+      "headline": "{{- .Site.Params.title -}}",
+      "description": "{{- .Site.Params.description -}}",
+      "thumbnailUrl": "{{- .Params.cover -}}",
+      "image": "{{- .Params.cover -}}"
+  }
+  </script>
+{{ else }}
+  <!-- non-article pages -->
+  <!-- last line in same-as is to ensure correct syntax concerning the commas -->
+  <script type="application/ld+json">
+  {
+      "@context": "http://www.schema.org",
+      "@type": "Person",
+      "name": "{{- .Site.Params.author -}}",
+      "url": "{{- .Site.Params.baseURL -}}{{- .Permalink -}}",
+      "sameAs": [
+          {{ if isset .Site.Params "github" }}
+              "https://github.com/{{- .Site.Social.github -}}",
+          {{ end }}
+          {{ if isset .Site.Social "github" }}
+              "https://gitlab.com/{{- .Site.Social.gitlab -}}",
+          {{ end }}
+          {{ if isset .Site.Social "twitter" }}
+              "https://twitter.com/{{- .Site.Social.twitter -}}",
+          {{ end }}
+              "{{ .Site.Params.baseURL }}"
+      ] 
+  }
+  </script>
 {{ end }}
-</script>
