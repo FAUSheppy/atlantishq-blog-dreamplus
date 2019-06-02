@@ -1,0 +1,21 @@
+<!-- last line in same-as is to ensure correct syntax concerning the commas -->
+<script type="application/ld+json">
+{
+    "@context": "http://www.schema.org",
+    "@type": "Person",
+    "name": "{{- .Site.Params.author -}}",
+    "url": "{{- .Site.Params.baseURL -}}{{- .Permalink -}}",
+    "sameAs": [
+        {{ if isset .Site.Params "github" }}
+            "https://github.com/{{- .Site.Social.github -}}",
+        {{ end }}
+        {{ if isset .Site.Social "github" }}
+            "https://gitlab.com/{{- .Site.Social.gitlab -}}",
+        {{ end }}
+        {{ if isset .Site.Social "twitter" }}
+            "https://twitter.com/{{- .Site.Social.twitter -}}",
+        {{ end }}
+            "{{ .Site.Params.baseURL }}"
+    ] 
+}
+</script>
