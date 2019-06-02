@@ -19,12 +19,7 @@
 {{ end }}
 
 <!-- JSON-LD i.e. for google rich-cards -->
-{{ if isset .Params "cover" }}
-  <!-- individual articles -->
-{{ else }}
-  <!-- any page without special params -->
-  {{- partial "root-JSON-LD.html" . -}}
-{{ end }}
+{{- partial "JSON-LD.html" . -}}
 
 <!-- Site Generator -->
 <meta name="generator" content="Hugo {{ .Hugo.Version }}" />

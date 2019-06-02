@@ -18,18 +18,15 @@
             "{{ .Site.Params.baseURL }}"
     ] 
 }
+{{ if isset .Params "cover" }}
 {
     "@context": "http://www.schema.org",
     "@type": "CreativeWork",
     "author: "{{- .Site.Params.author -}}",
     "headline": "{{- .Site.Params.title -}}",
     "description": "{{- .Site.Params.description -}}",
-    {{ if isset .Params "cover" }}
-      "thumbnailUrl": "{{- .Params.cover -}}",
-      "image": "{{- .Params.cover -}}"
-    {{ else }}
-      "thumbnailUrl": "{{- .Site.Params.cover -}}",
-      "image": "{{- .Site.Params.cover -}}"
-    {{ end }}
+    "thumbnailUrl": "{{- .Params.cover -}}",
+    "image": "{{- .Params.cover -}}"
 }
+{{ end }}
 </script>
