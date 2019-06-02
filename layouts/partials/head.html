@@ -10,7 +10,7 @@
 <meta property="og:url" content="{{- .Site.Params.baseURL -}}{{ .Permalink }}" />
 {{ if isset .Params "cover" }}
   <meta property="og:title" content="{{- .Params.title | plainify -}}" />
-  {{ /* HugoComment: coverNoSVG is a page variable and must be accessed using lower case */ }} 
+  <!-- HugoComment: coverNoSVG is a page variable and must be accessed using lower case --> 
   {{ if isset .Params "covernosvg" }}
       <meta property="og:image" content="{{- .Site.Params.baseURL -}}{{- .Params.coverNoSVG -}}" />
   {{ else }}
