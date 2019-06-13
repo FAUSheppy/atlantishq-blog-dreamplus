@@ -236,6 +236,7 @@ a{
 @media (max-width : 1000px) {
   .blog-card {
     width: 98%;
+    min-height: 300px;
   }
 }
 
