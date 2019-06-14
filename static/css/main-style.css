@@ -223,8 +223,8 @@ a{
 
 /* ######################## media-modifiers ######################## */
 /* ######################## responsive css  ######################## */
-/*Computer view*/
-@media (min-width : 1000px) {
+/* Computer view */
+@media (min-width : 1100px) {
   .blog-card {
     max-width: 500px;
     min-width: 500px;
@@ -232,11 +232,33 @@ a{
     min-height: 375px;
   }
 }
+
 /* half screen */
-@media (max-width : 1000px) {
+@media (min-width : 800px) and (max-width : 1100px) {
+  .blog-card {
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 375px;
+    min-height: 375px;
+  }
+}
+
+/* quater screen */
+@media (min-width : 600px) and (max-width : 800px) {
+  .blog-card {
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 375px;
+    min-height: 375px;
+  }
+}
+
+/* mobile */
+@media (max-width : 600px) {
   .blog-card {
     width: 98%;
     min-height: 300px;
+    min-width: 300px;
   }
 }
 
