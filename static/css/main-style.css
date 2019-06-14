@@ -248,8 +248,8 @@ a{
   .blog-card {
     max-width: 300px;
     min-width: 300px;
-    max-height: 375px;
-    min-height: 375px;
+    min-height: 300px;
+    min-width: 300px;
   }
 }
 
