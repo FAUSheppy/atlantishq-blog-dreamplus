@@ -17,9 +17,6 @@ other = "Next page"
 [flip]
 other = "About"
 
-[clickToPopTagsAndCategories]
-other = "Click this to pop tags and categories"
-
 [updateAt]
 other = "Last updated on"
 
