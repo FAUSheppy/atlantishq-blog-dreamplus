@@ -5,12 +5,12 @@ This theme is a version of the [Dream Plus Theme](https://github.com/g1eny0ung/h
 ---
 
 # Original Version
-![Standar Version](https://media.atlantishq.de/default.png)
+![Standar Version](https://media.atlantishq.de/pictures/default.png)
 
 ---
 
 # Optimized Version
-![This Version](https://media.atlantishq.de/atlantishq-dreamplus.png)
+![This Version](https://media.atlantishq.de/pictures/atlantishq-dreamplus.png)
 
 ---
 
