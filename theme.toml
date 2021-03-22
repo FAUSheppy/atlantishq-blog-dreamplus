@@ -8,7 +8,7 @@ description = "Build on dream plus to pass lighthouse test with 100 performance.
 homepage = "https://blog.atlantishq.de/"
 tags = ["clean", "blog", "responsive","personal","single page","material design"]
 features = ["randomBackground","favicon","blurBackground","home cards","flip", "colorful", "imagebackground", "i18n", "copyright", "motto"]
-min_version = "0.38"
+min_version = "0.40"
 
 [author]
 	name = "Sheppy"
